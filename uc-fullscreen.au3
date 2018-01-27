@@ -1,7 +1,7 @@
 #AutoIt3Wrapper_Icon=res\ros.ico
 #AutoIt3Wrapper_Res_Description=Rules of Survival Fullscreen mode
 #AutoIt3Wrapper_Res_LegalCopyright=@Maxhyt
-#AutoIt3Wrapper_Res_FileVersion=1.3.0.0
+#AutoIt3Wrapper_Res_FileVersion=1.3.0.1
 
 #include <WinAPI.au3>
 #include <GUIConstants.au3>
@@ -28,12 +28,12 @@ ElseIf WinWait("[CLASS:MPAY_SWITCH_ACCOUNT]", "", 5) Then
 EndIf
 
 $esp = Run("ROS_Ex.exe")
-WinWait("[CLASS:WindowsForms10.Window.8.app.0.141b42a_r9_ad1]")
+$espwin = WinWait("[REGEXPCLASS:WindowsForms10.Window.8.app.0.141b42a_*]")
 Sleep(1000)
-WinMove("[CLASS:WindowsForms10.Window.8.app.0.141b42a_r9_ad1]", "", 1, 1)
+WinMove($espwin, "", 1, 1)
 
 While 1
-	If _IsPressed("1B") Then
+	If _IsPressed("23") Then
 		WinClose($hwd)
 	EndIf
 
