@@ -1,10 +1,12 @@
 # RoS-Fullscreen
-Basicly makes the game runs in borderless mode
+Basically, it makes the game runs in borderless mode
 
 # How-to
-- Run the file
-- Login to your account
-- Run the ESP hack that are [supported](#compatibility)
+1. Run the file
+2. Login to your account
+3. Run the ESP hack that are [supported](#compatibility)
+
+- Press END key to close the game -> close my program (i tried to make it ESC key but it will cause issues when you're ingame)
 
 # Compatibility
 - Relief's External Hack v3.5 - @relief
