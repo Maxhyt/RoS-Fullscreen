@@ -1,7 +1,7 @@
 #AutoIt3Wrapper_Icon=res\ros.ico
 #AutoIt3Wrapper_Res_Description=Rules of Survival Fullscreen mode
 #AutoIt3Wrapper_Res_LegalCopyright=@Maxhyt
-#AutoIt3Wrapper_Res_FileVersion=1.3.0.1
+#AutoIt3Wrapper_Res_FileVersion=1.3.1.0
 
 #include <WinAPI.au3>
 #include <GUIConstants.au3>
@@ -17,19 +17,12 @@ $Nhandle = WinGetHandle($hwd)
 _WinAPI_SetWindowLong($Nhandle, $GWL_STYLE, $WS_POPUP + $WS_VISIBLE + $WS_MAXIMIZE)
 WinMove($hwd, "", 0, 0, @DesktopWidth, @DesktopHeight)
 
-If WinWait("[CLASS:MPAY_LOGIN]", "", 5) Then
-	WinSetState("[CLASS:MPAY_LOGIN]", "", @SW_HIDE)
-	WinSetState("[CLASS:MPAY_LOGIN]", "", @SW_SHOW)
-	WinWaitClose("[CLASS:MPAY_LOGIN]")
-ElseIf WinWait("[CLASS:MPAY_SWITCH_ACCOUNT]", "", 5) Then
-	WinSetState("[CLASS:MPAY_SWITCH_ACCOUNT]", "", @SW_HIDE)
-	WinSetState("[CLASS:MPAY_SWITCH_ACCOUNT]", "", @SW_SHOW)
-	WinWaitClose("[CLASS:MPAY_SWITCH_ACCOUNT]")
-EndIf
+WinWaitClose("[CLASS:MPAY_LOGIN]")
 
 $esp = Run("ROS_Ex.exe")
-$espwin = WinWait("[REGEXPCLASS:WindowsForms10.Window.8.app.0.141b42a_*]")
-Sleep(1000)
+WinWait("[REGEXPCLASS:(WindowsForms10.Window.8.ap)]")
+Sleep(2000)
+$espwin = WinGetHandle("[REGEXPCLASS:(WindowsForms10.Window.8.ap)]")
 WinMove($espwin, "", 1, 1)
 
 While 1
@@ -41,5 +34,5 @@ While 1
 		ProcessClose($esp)
 		Exit
 	EndIf
-	Sleep(80)
+	Sleep(100)
 WEnd
