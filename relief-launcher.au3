@@ -35,7 +35,7 @@ WinWait("[CLASS:ConsoleWindowClass]")
 WinSetState("[CLASS:ConsoleWindowClass]","",@SW_MINIMIZE)
 
 While 1
-	If _IsPressed("1B") Then
+	If _IsPressed("23") Then
 		WinClose($hwd)
 	EndIf
 
