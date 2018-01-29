@@ -9,8 +9,8 @@ Basically, it makes the game runs in borderless mode
 - Press END key to close the game -> close my program (i tried to make it ESC key but it will cause issues when you're ingame)
 
 # Compatibility
-- Relief's External Hack v3.5 - @relief
-- UC Menu - @dorfmidge
+- UC Menu - @dorfmidge (Recommended)
+- Relief's External Hack v3.5 - @relief (it is detected for some)
 
 # Download:
 [Releases is where you need to go to](https://github.com/Maxhyt/RoS-Fullscreen/releases)
