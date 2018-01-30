@@ -1,7 +1,7 @@
 #AutoIt3Wrapper_Icon=res\ros.ico
 #AutoIt3Wrapper_Res_Description=Rules of Survival Fullscreen mode
 #AutoIt3Wrapper_Res_LegalCopyright=@Maxhyt
-#AutoIt3Wrapper_Res_FileVersion=1.3.0.1
+#AutoIt3Wrapper_Res_FileVersion=1.4.1.0
 
 #include <WinAPI.au3>
 #include <GUIConstants.au3>
@@ -15,12 +15,19 @@ Sleep(6000)
 
 $Nhandle = WinGetHandle($hwd)
 _WinAPI_SetWindowLong($Nhandle, $GWL_STYLE, $WS_POPUP + $WS_VISIBLE + $WS_MAXIMIZE)
-WinMove($hwd, "", 0, 0, @DesktopWidth, @DesktopHeight)
+WinMove($hwd, "", -1, -1, @DesktopWidth+2, @DesktopHeight+2)
 
 If WinWait("[CLASS:MPAY_LOGIN]", "", 5) Then
 	WinWaitClose("[CLASS:MPAY_LOGIN]")
 ElseIf WinWait("[CLASS:MPAY_SWITCH_ACCOUNT]", "", 5) Then
 	WinWaitClose("[CLASS:MPAY_SWITCH_ACCOUNT]")
+EndIf
+
+$msgbox = MsgBox(4, "RoS Fullscreen", "Are you using ESP hack?")
+If $msgbox = 6 Then
+	MsgBox(0, "RoS Fullscreen", "Open the hack now then press OK")
+	WinWait("[REGEXPTITLE:^(?!Rules of Survival); X:0; Y:0]")
+	WinMove("[REGEXPTITLE:^(?!Rules of Survival); X:0; Y:0]", "", 1, 1)
 EndIf
 
 While 1
@@ -32,6 +39,5 @@ While 1
 		Exit
 	EndIf
 
-	WinMove("[X:0;Y:0]", "", 1, 1)
 	Sleep(80)
 WEnd
