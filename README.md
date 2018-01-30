@@ -10,6 +10,7 @@ Basically, it makes the game runs in borderless mode
 
 # Compatibility
 ~~- UC Menu - @dorfmidge (it is detected for some)~~
+
 ~~- Relief's External Hack v3.5 - @relief (it is detected for some)~~
 - Compatible all the time.
 
