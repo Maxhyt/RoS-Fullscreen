@@ -4,7 +4,7 @@ Basically, it makes the game runs in borderless mode
 # How-to
 1. Run the file
 2. Login to your account
-3. Run the ESP hack that are [~supported~](#compatibility)
+3. Run the ESP hack ~~that are [supported](#compatibility)~~
 
 - Press END key to close the game -> close my program (i tried to make it ESC key but it will cause issues when you're ingame)
 
