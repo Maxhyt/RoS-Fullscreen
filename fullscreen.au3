@@ -24,12 +24,14 @@ ElseIf WinWait("[CLASS:MPAY_SWITCH_ACCOUNT]", "", 5) Then
 EndIf
 
 While 1
-	If _IsPressed("1B") Then
+	If _IsPressed("23") Then
 		WinClose($hwd)
 	EndIf
 
 	If Not ProcessExists("ros.exe") Then
 		Exit
 	EndIf
+
+	WinMove("[X:0;Y:0]", "", 1, 1)
 	Sleep(80)
 WEnd
